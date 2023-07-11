@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GET_QUOTES, QUOTES_ERROR } from "../actions/types";
 
-//Load user
+//get quotes
 export const getQuote = (category: String) => async (dispatch: any) => {
   try {
     const res = await axios.get(
@@ -19,4 +19,77 @@ export const getQuote = (category: String) => async (dispatch: any) => {
       payload: "Error getting quote",
     });
   }
+};
+
+//get categories
+export const getCategory = () => {
+  return [
+    "age",
+    "alone",
+    "amazing",
+    "anger",
+    "architecture",
+    "art",
+    "attitude",
+    "beauty",
+    "best",
+    "birthday",
+    "business",
+    "car",
+    "change",
+    "communications",
+    "computers",
+    "cool",
+    "courage",
+    "dad",
+    "dating",
+    "death",
+    "design",
+    "dreams",
+    "education",
+    "environmental",
+    "equality",
+    "experience",
+    "failure",
+    "faith",
+    "family",
+    "famous",
+    "fear",
+    "fitness",
+    "food",
+    "forgiveness",
+    "freedom",
+    "friendship",
+    "funny",
+    "future",
+    "god",
+    "good",
+    "government",
+    "graduation",
+    "great",
+    "happiness",
+    "health",
+    "history",
+    "home",
+    "hope",
+    "humor",
+    "imagination",
+    "inspirational",
+    "intelligence",
+    "jealousy",
+    "knowledge",
+    "leadership",
+    "learning",
+    "legal",
+    "life",
+    "love",
+    "marriage",
+    "medical",
+    "men",
+    "mom",
+    "money",
+    "morning",
+    "movies",
+    "success",
+  ];
 };

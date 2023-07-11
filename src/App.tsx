@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./components/Landing";
+import "./styles/styles.css";
 
 //Redux
 import { Provider } from "react-redux";

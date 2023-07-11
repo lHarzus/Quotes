@@ -1,5 +1,13 @@
-/*Navbar*/
-.navbar {
-  text-align: center;
-  padding: 1rem;
+body {
+  margin: 0;
+}
+
+html {
+  /*62.5% of 16px = 10px*/
+  font-size: 62.5%;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=styles.css.map */
