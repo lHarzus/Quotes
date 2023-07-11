@@ -11,6 +11,7 @@ const Landing = ({ getQuote, quotes }: { getQuote: any; quotes: any }) => {
   }, []);
 
   if (!quotes.quotes) return <div>Loading</div>;
+
   return (
     <>
       <div>Landing : {quotes.quotes[0].quote}</div>
