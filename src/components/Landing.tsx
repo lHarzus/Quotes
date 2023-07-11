@@ -19,14 +19,14 @@ const Landing = ({
 }) => {
   const [category, setCategory] = useState("happiness");
 
+  const [generate, setGenerate] = useState(0);
+
   const categories = getCategory();
 
   useEffect(() => {
     getQuote(category);
     getImage();
-  }, [category]);
-
-  console.log(image.image);
+  }, [category, generate]);
 
   if (!quotes.quotes || !image.image) return <div>Loading</div>;
 
@@ -40,7 +40,10 @@ const Landing = ({
       <div>
         {category} Quote : {quotes.quotes[0].quote}
       </div>
-      <img src={"data:image/png;base64, " + image.image}></img>
+      <div>
+        <img src={"data:image/png;base64, " + image.image}></img>
+      </div>
+      <button onClick={() => setGenerate(generate + 1)}>Generate Quote</button>
     </>
   );
 };
