@@ -17,7 +17,7 @@ const Landing = ({
   getImage: any;
   image: any;
 }) => {
-  const [category, setCategory] = useState("happiness");
+  const [category, setCategory] = useState("Happiness");
 
   const [generate, setGenerate] = useState(0);
 
@@ -36,14 +36,18 @@ const Landing = ({
         categories={categories}
         nrPerPage={8}
         setCategory={setCategory}
+        selected={category}
       />
-      <div>
-        {category} Quote : {quotes.quotes[0].quote}
+      <h1>{category} Quote</h1>
+      <div className="quote">
+        {quotes.quotes[0] ? <p>{quotes.quotes[0].quote}</p> : <p>error</p>}
+        <div>
+          <img src={"data:image/png;base64, " + image.image}></img>
+        </div>
       </div>
-      <div>
-        <img src={"data:image/png;base64, " + image.image}></img>
-      </div>
-      <button onClick={() => setGenerate(generate + 1)}>Generate Quote</button>
+      <button className="btn" onClick={() => setGenerate(generate + 1)}>
+        Generate Quote
+      </button>
     </>
   );
 };

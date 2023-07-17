@@ -10,9 +10,11 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
+        <div className="box">
+          <Routes>
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </div>
       </Router>
     </Provider>
   );
